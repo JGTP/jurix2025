@@ -1,0 +1,47 @@
+target: Churn
+
+features:
+  numerical: 
+  - tenure
+  - MonthlyCharges
+  - TotalCharges
+  categorical: 
+  - MultipleLines
+  - InternetService
+  - OnlineSecurity
+  - OnlineBackup
+  - DeviceProtection
+  - TechSupport
+  - StreamingTV
+  - StreamingMovies
+  - PaymentMethod
+  - Contract
+  binary: 
+  - gender
+  - SeniorCitizen
+  - Partner
+  - Dependents
+  - PhoneService
+  - PaperlessBilling
+  dates: []
+  ordinal: []
+
+  exclude: 
+  - customerID
+
+preprocessing:
+  sample_size: 1000
+
+  missing_value_codes: []
+  
+  # Feature engineering
+  standardise_numerical: true
+  one_hot_categoricals: true   
+  
+  # Train/test split
+  test_size: 0.2
+  random_state: 42
+
+
+
+  

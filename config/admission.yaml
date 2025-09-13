@@ -1,0 +1,37 @@
+target: "Chance of Admit "
+# Needs rounding: 
+# df["Admission"] = df["Chance of Admit "].round(0).astype(int)
+
+features:
+  numerical:
+  - GRE Score
+  - TOEFL Score
+  - CGPA
+  - "LOR "
+  - SOP
+  - University Rating
+  categorical: []
+  binary: 
+  - Research
+  dates: []
+  ordinal: []
+
+  exclude:
+  - Serial No.
+
+preprocessing:
+  sample_size: 1000
+
+  missing_value_codes: []
+  
+  # Feature engineering
+  standardise_numerical: true
+  one_hot_categoricals: true   
+  
+  # Train/test split
+  test_size: 0.2
+  random_state: 42
+
+
+
+  
